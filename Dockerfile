@@ -1,4 +1,4 @@
-FROM elasticsearch:6.8-alpine
+FROM elasticsearch:6.8
 
 # Install pbzip2 for parallel extraction
 RUN apk update \
