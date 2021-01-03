@@ -1,15 +1,10 @@
-version: '2'
+version: "3.1"
 services:
   photon:
     build:
       context: .
       dockerfile: Dockerfile
-    image: dogcalas/photon-geocoder:latest
     volumes:
-      - data:/photon/photon_data
+      - ./data:/photon/photon_data
     ports:
-      - 2322:2322
-
-volumes:
-  data:
-    driver: local
+      - 2323:2322

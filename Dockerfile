@@ -1,4 +1,4 @@
-FROM elasticsearch:5.6-alpine
+FROM elasticsearch:6.8-alpine
 
 # Install pbzip2 for parallel extraction
 RUN apk update \
@@ -8,7 +8,7 @@ RUN apk update \
     && rm -rf /var/cache/apk/*
 
 WORKDIR /photon
-ADD https://github.com/komoot/photon/releases/download/0.3.1/photon-0.3.1.jar /photon/photon.jar
+ADD https://github.com/komoot/photon/releases/download/0.3.4/photon-0.3.4.jar /photon/photon.jar
 COPY entrypoint.sh ./entrypoint.sh
 
 VOLUME /photon/photon_data
